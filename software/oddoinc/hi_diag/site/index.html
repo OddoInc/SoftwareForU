@@ -8,7 +8,19 @@
 <div id="description">Hi Dialog is a simple app that pops up a dialog saying "Hi" When opened.</div>
 <div id="downloads">
   <a>Downloads</a>
- <a href="download.html"><button>Download Windows 10+</button></a>
+  <a href="javascript:DownloadAndRedirect()"><button>Download Windows 10+</button></a>
+  <script type="text/javascript">
+function DownloadAndRedirect()
+{
+   var DownloadURL = "../hi_diag.exe";
+   var RedirectURL = "download.html";
+   var RedirectPauseSeconds = 0;
+   location.href = DownloadURL;
+   setTimeout("DoTheRedirect('"+RedirectURL+"')",parseInt(RedirectPauseSeconds*1000));
+}
+function DoTheRedirect(url) { window.location=url; }
+</script>
+
 </div>
 </div>
 </body>
